@@ -15,6 +15,5 @@ var hammingWeight = function (n) {
             obj[i] = obj[i] + 1
         }
     }
-    let res = obj[1]
-    return Number(res)
+    return Number(obj[1])
 };
