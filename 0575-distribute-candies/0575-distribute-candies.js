@@ -3,19 +3,27 @@
  * @return {number}
  */
 var distributeCandies = function (candyType) {
-    let map = new Map()
+    // let map = new Map()
     let max = candyType.length / 2
-    for (let i of candyType) {
-        if (map.has(i)) {
-            map.set(i, map.get(i) + 1)
-        }
-        else {
-            map.set(i, 1)
-        }
-    }
+    // for (let i of candyType) {
+    //     if (map.has(i)) {
+    //         map.set(i, map.get(i) + 1)
+    //     }
+    //     else {
+    //         map.set(i, 1)
+    //     }
+    // }
 
-    if (max >= map.size) {
-        return map.size
+    // if (max >= map.size) {
+    //     return map.size
+    // }
+    // else {
+    //     return max
+    // }
+
+    let set = [...new Set(candyType)]
+    if (max >= set.length) {
+        return set.length
     }
     else {
         return max
