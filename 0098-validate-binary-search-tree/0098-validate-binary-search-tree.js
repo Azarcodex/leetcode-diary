@@ -11,15 +11,17 @@
  * @return {boolean}
  */
 var isValidBST = function (root) {
-    function validate(root, min = -Infinity, max = Infinity) {
+    function Validate(root, min = -Infinity, max = Infinity) {
         if (root === null) return true
 
         if (root.val <= min || root.val >= max) {
             return false
         }
-        let leftTree = validate(root.left, min, root.val)
-        let rightTree = validate(root.right, root.val, max)
+
+        let leftTree = Validate(root.left, min, root.val)
+        let rightTree = Validate(root.right, root.val, max)
+
         return leftTree && rightTree
     }
-    return validate(root)
+    return Validate(root)
 };
