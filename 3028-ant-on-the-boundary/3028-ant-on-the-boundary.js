@@ -3,15 +3,14 @@
  * @return {number}
  */
 var returnToBoundaryCount = function (nums) {
-    let neg = 0, pos = 0
+    let sum = 0, count = 0
     for (let i = 0; i < nums.length; i++) {
-        if (nums[i] < 0) {
-            neg += nums[i]
-        }
-        else {
-            pos += nums[i]
+        sum += nums[i]
+        if (sum === 0) {
+            count++
         }
     }
-    if (Math.abs(neg) === pos) return 1
-    return 0
+    return count
+
+
 };
